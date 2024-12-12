@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+    :root{
+      --Soft-blue: hsl(215, 52%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      --Very-dark-blue-main: hsl(217, 54%, 11%);
+      --Very-dark-blue-tab: hsl(216, 50%, 16%);
+      --Very-dark-blue-global: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      background-color: var(--Very-dark-blue-main);
+      font-family: "Outfit",sans-serif;
+    }
+    body, .flex{
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      flex-direction: row;
+    }
+    .view{
+      display: none;
+    }
+    #tab{
+      background-color: var(--Very-dark-blue-tab);
+      border-radius: 10px;
+      width: 280px;
+      padding: 16px;
+    }
+    #tab #img{
+      width: 100%;
+    }
+    #tab #img img{
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+    #tab #text h3{
+      color: var(--White);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    #tab #text>p{
+      color: var(--Soft-blue);
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+    .stat{
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      border-bottom: 0.1px solid hsl(215, 52%, 70%);
+    }
+    .stat .ether p{
+      color: var(--Cyan);
+      font-size: 14px;
+      font-weight: 600;
+      padding-left: 7px;
+    }
+    .stat .clock p{
+      color: var(--Soft-blue);
+      font-size: 15px;
+      font-weight: 400;
+      padding-left: 7px;
+    }
+    .avatar{
+      justify-content: flex-start;
+    }
+    .avatar img{
+      margin-right: 12px;
+      width: 30px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+    }
+    .avatar p{
+      color: var(--Soft-blue);
+      font-size: 13px;
+    }
+    .avatar p span{
+      color: var(--White);
+    }
+
+    /*Active State*/
+    #tab #text h3:hover{
+      color: var(--Cyan);
+      cursor: pointer;
+    }
+    .avatar p span:hover{
+      color: var(--Cyan);
+      cursor: pointer;
+    }
+    img:first-child:hover{
+      cursor: pointer;
+      filter: brightness(3);
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="tab">
+    <div id="img">
+      <img src="images/image-equilibrium.jpg" alt="">
+      <img class="view" src="images/icon-view.svg" alt="">
+    </div>
+    
+    <div id="text">
+      <h3>Equilibrium #3429</h3>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="stat flex">
+
+        <div class="ether flex">
+          <img src="images/icon-ethereum.svg" alt="">
+          <p>0.041 ETH</p> 
+        </div> 
+
+        <div class="clock flex">
+          <img src="images/icon-clock.svg" alt="">
+          <p>3 days left</p>
+        </div>
+        
+      </div>
+      <div class="avatar flex">
+        <img src="images/image-avatar.png" alt="">
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
